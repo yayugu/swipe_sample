@@ -231,6 +231,11 @@ Flipsnap.prototype._setX = function(x) {
 	self.currentX = x;
 	if (support.cssAnimation) {
 		self.element.style[ saveProp.transform ] = self._getTranslate(x);
+
+    //FIXME
+    $.each($('.flipsnap'), function(i, element) {
+      element.style[ saveProp.transform ] = self._getTranslate(x)
+    });
 	}
 	else {
 		if (self.animation) {
