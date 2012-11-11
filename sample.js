@@ -1,0 +1,3 @@
+$(function(){
+  Flipsnap('.flipsnap');
+});
